@@ -1,9 +1,0 @@
-bin/
-obj/
-node_modules/
-.env
-.env.*
-*.pdf
-*.docx
-Thumbs.db
-.DS_Store

@@ -1,16 +1,49 @@
-# 2b-projects — segundo cérebro do Fabio
+# bks-2brains — vault
 
-Este arquivo existe só para o Claude Code carregar contexto ao abrir na raiz do vault.
-Leitura obrigatória antes de qualquer coisa: CONTEXT.md.
+Voce esta na raiz do vault. Aqui se **decide** em que trabalhar; o trabalho acontece dentro do
+repositorio de cada projeto.
 
-## Comandos disponíveis aqui na raiz
-- `/brain` — retoma a sessão: quem você é, onde parei, próximo passo.
-- `/new-project <nome> <categoria>` — cria um projeto novo (única forma de começar).
-- `/canonize` — consolida docs/input/ + docs/design/ de um projeto em docs/canonical/CONTEXT.md.
-- `/prd` — gera docs/canonical/PRD-{projeto}.md a partir do CONTEXT.md consolidado.
-- `/review` — dispara revisão de segurança (agente reviewer) num repo específico.
+## O que este repositorio e
 
-Comandos de código (`/spec`, `/arch`, `/loop`, `/save`) rodam DENTRO do repo do projeto
-(`repos/{categoria}/{projeto}/`), não aqui — abra uma sessão nova lá quando for codar.
+O vault guarda o que atravessa projetos: perfil, base de conhecimento e decisoes sobre o proprio
+processo. Ferramenta nao mora aqui — skills, comandos, agentes e templates vem do plugin
+`bks-sdd-kit`.
 
-Regras completas: `GUIA-OBSIDIAN-CLAUDE.md` e `MANUAL-COMANDOS.md`.
+```
+workbench/     perfil, decisoes de processo
+knowledge/     base transversal: wiki, material bruto, ingest
+repos/         os projetos, por categoria
+docs/          os guias deste vault
+```
+
+## O que fazer numa sessao aberta aqui
+
+Rode `/brain`. Ele monta o panorama de todos os projetos a partir dos `STATUS.md` e diz qual tem
+trabalho pronto para seguir.
+
+Para trabalhar num projeto, abra uma sessao nova na pasta dele. Os comandos de projeto escrevem no
+repositorio onde a sessao esta aberta — rodar daqui gravaria no lugar errado.
+
+`/new-project` e a excecao: roda aqui, cria em `repos/{categoria}/{nome}/`.
+
+## Antes de responder qualquer coisa
+
+Leia `workbench/profile.md`. Ele diz quem e o usuario e como ele trabalha.
+
+## Onde uma coisa nova vai
+
+| O que | Onde |
+|---|---|
+| Sobre o usuario, vale para todo projeto | `workbench/` |
+| Conhecimento geral, mais de um projeto | `knowledge/` |
+| O que um produto e | `repos/.../brain/domain/` |
+| Como se constroi num projeto | `repos/.../brain/engineering/` |
+| Decisao fechada de um projeto | `repos/.../decisions/` |
+| Ferramenta, template, skill reusavel | `bks-sdd-kit`, nao aqui |
+
+Detalhes em `docs/ESTRUTURA.md`.
+
+## Idioma
+
+Documentacao e artefatos em portugues do Brasil. Codigo, nomes de tipo, metodo e variavel em
+ingles.
