@@ -1,9 +1,10 @@
 # bks-2brains
 
-O vault. Guarda o que e **seu**: perfil, base de conhecimento, decisoes sobre o proprio processo,
-e os projetos.
+Template de vault para trabalho assistido por IA. Traz a **estrutura** e a **documentacao** —
+o conteudo e seu, e nasce vazio.
 
-Nao guarda ferramenta. Skills, comandos, agentes e templates vem do plugin
+Um vault guarda o que atravessa projetos: quem voce e, o que voce aprendeu, e as decisoes sobre
+como voce trabalha. Nao guarda ferramenta — skills, comandos, agentes e templates vem do plugin
 [`bks-sdd-kit`](https://github.com/fabiobackside-code/bks-sdd-kit), que se instala uma vez e serve
 qualquer maquina.
 
@@ -18,10 +19,17 @@ qualquer maquina.
 
 Os dois funcionam separados. Juntos, o kit sabe onde procurar o que e seu.
 
-## Instalacao
+## Comecando
+
+**Leia [`docs/SETUP.md`](docs/SETUP.md).** Do `git clone` a primeira sessao produtiva, com os
+comandos de cada passo.
+
+O caminho curto:
 
 ```bash
-git clone https://github.com/fabiobackside-code/bks-2brains
+git clone https://github.com/fabiobackside-code/bks-2brains meu-vault
+cd meu-vault
+rm -rf .git && git init          # o seu vault e outro repositorio
 ```
 
 Instale o kit:
@@ -31,15 +39,21 @@ Instale o kit:
 /plugin install bks-sdd-kit@bks-sdd-kit
 ```
 
-E aponte o vault, em `~/.claude/settings.json`:
+Aponte o vault, em `~/.claude/settings.json`:
 
 ```json
 {
   "env": {
-    "BKS_VAULT": "X:/2brains",
-    "BKS_KNOWLEDGE": "X:/2brains/knowledge"
+    "BKS_VAULT": "/caminho/do/meu-vault",
+    "BKS_KNOWLEDGE": "/caminho/do/meu-vault/knowledge"
   }
 }
+```
+
+Escreva o seu perfil:
+
+```bash
+cp workbench/profile.example.md workbench/profile.md
 ```
 
 ## Estrutura
@@ -51,7 +65,7 @@ bks-2brains/
 │   ├── decisions/      ADRs sobre o processo, nao sobre um projeto
 │   └── knowledge-guide.md
 ├── knowledge/          base de conhecimento transversal
-│   ├── wiki/           conhecimento consolidado
+│   ├── wiki/           conhecimento consolidado, por area
 │   ├── raw/            material bruto por tipo
 │   └── tools/          ingest e busca
 ├── repos/              os projetos, por categoria
@@ -60,6 +74,9 @@ bks-2brains/
 │   └── private/
 └── docs/               os guias deste vault
 ```
+
+As pastas de conteudo vem vazias, com `.gitkeep`. O que preenche cada uma esta no
+[`SETUP.md`](docs/SETUP.md).
 
 ## Como se trabalha
 
@@ -77,12 +94,22 @@ O ciclo completo esta em [`docs/COMO-USAR.md`](docs/COMO-USAR.md).
 
 | Documento | Sobre |
 |---|---|
+| [`docs/SETUP.md`](docs/SETUP.md) | do clone a primeira sessao: instalar, configurar, alimentar |
 | [`docs/COMO-USAR.md`](docs/COMO-USAR.md) | o ciclo de trabalho, do inicio ao fim |
 | [`docs/ESTRUTURA.md`](docs/ESTRUTURA.md) | cada diretorio, o que entra e o que nao entra |
 | [`docs/INTEGRACAO-KIT.md`](docs/INTEGRACAO-KIT.md) | como vault e kit se encontram |
 
-## Historico
+## O que este repositorio nao publica
 
-Este repositorio continua o `bks-obsidian-2brains-ai-pattern`. Os commits anteriores a
-reestruturacao estao preservados — o layout antigo, com hub central em `brain/_bks-ai/`, e
-consultavel no historico.
+Nem o conteudo do vault de quem o mantem, nem o seu. O `.gitignore` protege por lista de
+permissao: dentro de `knowledge/` e `workbench/`, tudo e ignorado por padrao e so o que esta
+liberado com `!` sobe — um arquivo novo nasce protegido.
+
+Ficam de fora acervo, perfil, estado (`STATUS.md`, `JOURNAL.md`), midia, documento pesado,
+credencial e configuracao local. A lista completa esta no [`SETUP.md`](docs/SETUP.md).
+
+Se voce for versionar o **seu** vault, use um repositorio **privado**.
+
+## Licenca
+
+Veja [`LICENSE`](LICENSE).

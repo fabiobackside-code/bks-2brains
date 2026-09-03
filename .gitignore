@@ -1,12 +1,72 @@
+# ============================================================
+# bks-2brains — template publico
+# ------------------------------------------------------------
+# Este repositorio publica a ESTRUTURA e a DOCUMENTACAO de como
+# montar o seu vault. Nao publica o conteudo do vault de ninguem.
+#
+# A regra: por padrao, ignora tudo dentro das areas de conteudo.
+# So o que for explicitamente liberado com "!" sobe. Assim, um
+# arquivo novo nasce protegido — o descuido nao vaza.
+# ============================================================
 
-# repositorios proprios — cada um tem seu git
+# --- repositorios proprios: cada um tem seu git ---
 /kit/
 /repos/
 
-# midia bruta — nao versionada
-# Video e audio de origem ficam fora do git: o que se consulta e a transcricao
-# em .md ao lado. Arquivo grande estoura o limite de 100 MB por blob do GitHub
-# e torna todo clone lento.
+# --- estado do SEU vault: nao pertence ao template ---
+/STATUS.md
+/JOURNAL.md
+
+# --- docs do layout anterior: mantidos localmente, fora do template ---
+/docs/CONTEXT.md
+/docs/GUIA-OBSIDIAN-CLAUDE.md
+/docs/MANUAL-COMANDOS.md
+
+# --- perfil pessoal: cada um escreve o seu ---
+/workbench/**
+!/workbench/
+!/workbench/**/
+!/workbench/README.md
+!/workbench/profile.example.md
+!/workbench/.gitkeep
+
+# --- base de conhecimento: acervo e pessoal, estrutura e publica ---
+knowledge/**
+!knowledge/
+!knowledge/**/
+!knowledge/README.md
+!knowledge/**/README.md
+!knowledge/**/.gitkeep
+!knowledge/tools/*.sh
+!knowledge/tools/*.md
+
+# --- configuracao e log locais ---
+.claude/settings.local.json
+.claude/**/settings.local.json
+**/.logs/
+**/.cache/
+.obsidian/
+.env
+.env.*
+!.env.example
+
+# --- credencial: nunca, em lugar nenhum ---
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+id_rsa*
+id_ed25519*
+*credentials*.json
+*secret*.json
+.npmrc
+.netrc
+
+# --- midia bruta: fica fora do git ---
+# O que se consulta e a transcricao em .md ao lado. Arquivo grande
+# estoura o limite de 100 MB por blob do GitHub e torna o clone lento.
 *.mp4
 *.mkv
 *.mov
@@ -26,3 +86,20 @@
 *.ogg
 *.opus
 *.wma
+
+# --- documento pesado: material bruto de terceiro ---
+*.pdf
+*.epub
+*.mobi
+*.docx
+*.xlsx
+*.pptx
+
+# --- sistema operacional e editor ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+__pycache__/
+*.pyc

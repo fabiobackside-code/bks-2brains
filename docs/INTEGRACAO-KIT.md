@@ -95,7 +95,7 @@ O primeiro que existir vence.
 **Skills**
 
 Uma skill em `{projeto}/brain/engineering/` sobrescreve a equivalente do kit **para aquele
-projeto**. E como o `nquantic` mantem o padrao de identificadores em pt-BR sem que isso vire regra
+projeto**. E como um projeto mantem o padrao de identificadores em pt-BR sem que isso vire regra
 para os demais.
 
 ---

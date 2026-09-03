@@ -9,7 +9,7 @@ O ciclo de trabalho, do primeiro material bruto ate o codigo entregue.
 **Nao sabe em que mexer?** Abra a sessao na raiz do vault:
 
 ```
-cd X:/2brains
+cd /caminho/do/vault
 claude
 /brain
 ```
@@ -20,7 +20,7 @@ Voce escolhe.
 **Ja sabe?** Abra direto no projeto:
 
 ```
-cd X:/2brains/repos/backside/layan
+cd /caminho/do/vault/repos/backside/meu-projeto
 claude
 /brain
 ```
@@ -154,7 +154,7 @@ Roteia o que a sessao produziu: decisoes para `decisions/`, specs para `specs/`,
 ## Retomando depois de semanas
 
 ```
-cd X:/2brains
+cd /caminho/do/vault
 claude
 /brain
 ```

@@ -30,6 +30,9 @@ repositorio onde a sessao esta aberta — rodar daqui gravaria no lugar errado.
 
 Leia `workbench/profile.md`. Ele diz quem e o usuario e como ele trabalha.
 
+Se o arquivo nao existir, o vault ainda nao foi configurado: aponte `docs/SETUP.md` e ofereca
+partir de `workbench/profile.example.md`.
+
 ## Onde uma coisa nova vai
 
 | O que | Onde |

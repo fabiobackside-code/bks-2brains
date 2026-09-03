@@ -56,8 +56,8 @@ knowledge/
 
 Conhecimento **transversal**: vale para mais de um projeto, ou para nenhum em particular.
 
-**Nao entra:** dominio de um produto especifico. O metodo de treinamento do Layan vive em
-`repos/backside/layan/brain/domain/`, nao aqui. A regra: se so faz sentido dentro de um projeto,
+**Nao entra:** dominio de um produto especifico. O metodo de treinamento de um app de treino vive em
+`repos/backside/{projeto}/brain/domain/`, nao aqui. A regra: se so faz sentido dentro de um projeto,
 e do projeto.
 
 ### `repos/` — os projetos
