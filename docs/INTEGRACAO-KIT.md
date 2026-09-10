@@ -1,28 +1,28 @@
-# Integracao com o kit
+# Integração com o kit
 
-Como o vault e o plugin se encontram, e o que acontece quando um dos dois nao esta presente.
+Como o vault e o plugin se encontram, e o que acontece quando um dos dois não está presente.
 
 ---
 
-## A divisao
+## A divisão
 
 | | `bks-2brains` | `bks-sdd-kit` |
 |---|---|---|
 | E | o vault | o motor |
 | Guarda | conhecimento, perfil, projetos | skills, comandos, agentes, hooks, templates |
-| Muda quando | voce trabalha | o processo evolui |
-| Serve | voce | qualquer um |
-| Versionado em | seu repositorio | plugin publico, MIT |
+| Muda quando | você trabalha | o processo evolui |
+| Serve | você | qualquer um |
+| Versionado em | seu repositório | plugin público, MIT |
 
 A regra que decide onde uma coisa vai: **se outra pessoa usaria, e do kit; se e biografia, e do
 vault.**
 
-Por isso `dotnet-standards.md` foi para o kit — e metodo, reusavel. E `profile.md` ficou no vault
-— e voce.
+Por isso `dotnet-standards.md` foi para o kit — e método, reusável. E `profile.md` ficou no vault
+— e você.
 
 ---
 
-## Instalacao
+## Instalação
 
 **1 · O kit**
 
@@ -37,7 +37,7 @@ Por isso `dotnet-standards.md` foi para o kit — e metodo, reusavel. E `profile
 git clone https://github.com/fabiobackside-code/bks-2brains X:/2brains
 ```
 
-**3 · A ligacao**
+**3 · A ligação**
 
 Em `~/.claude/settings.json`:
 
@@ -52,42 +52,42 @@ Em `~/.claude/settings.json`:
 
 ---
 
-## As variaveis
+## As variáveis
 
-| Variavel | Aponta para | Quem usa |
+| Variável | Aponta para | Quem usa |
 |---|---|---|
 | `BKS_VAULT` | raiz do vault | `/brain` no modo panorama, `/new-project` |
 | `BKS_KNOWLEDGE` | `knowledge/` | consulta a base transversal |
 
-Sao duas, nao tres. A antiga `BKS_BRAIN` apontava para um hub central que nao existe mais —
-memoria e decisao agora vivem dentro de cada projeto.
+São duas, não três. A antiga `BKS_BRAIN` apontava para um hub central que não existe mais —
+memória e decisão agora vivem dentro de cada projeto.
 
 ---
 
 ## Sem uma das partes
 
-**Kit sem vault.** Funciona. As skills operam sobre o diretorio atual e nao leem o vault. Os
+**Kit sem vault.** Funciona. As skills operam sobre o diretório atual e não leem o vault. Os
 comandos de projeto — `/note`, `/canonize`, `/spec`, `/arch`, `/loop`, `/review`, `/save` —
-trabalham dentro do repositorio onde a sessao esta aberta.
+trabalham dentro do repositório onde a sessão está aberta.
 
-So dois comandos precisam do vault: `/brain` no modo panorama (que percorre `repos/`) e
+Só dois comandos precisam do vault: `/brain` no modo panorama (que percorre `repos/`) e
 `/new-project` (que cria dentro dele). Sem `BKS_VAULT`, ambos perguntam onde trabalhar.
 
-**Vault sem kit.** Os arquivos continuam legiveis — sao markdown. O que se perde sao os comandos e
-as skills. O `STATUS.md` de cada projeto segue sendo o ponto de entrada, so que lido a mao.
+**Vault sem kit.** Os arquivos continuam legíveis — são markdown. O que se perde são os comandos e
+as skills. O `STATUS.md` de cada projeto segue sendo o ponto de entrada, só que lido a mao.
 
 ---
 
-## Precedencia
+## Precedência
 
-Quando os dois existem, o vault e o projeto podem sobrepor o padrao do kit.
+Quando os dois existem, o vault e o projeto podem sobrepor o padrão do kit.
 
 **Templates**
 
 ```
-{projeto}/.bks/templates/     mais especifico
+{projeto}/.bks/templates/     mais específico
 ${BKS_VAULT}/workbench/templates/
-${CLAUDE_PLUGIN_ROOT}/templates/    padrao do kit
+${CLAUDE_PLUGIN_ROOT}/templates/    padrão do kit
 ```
 
 O primeiro que existir vence.
@@ -95,7 +95,7 @@ O primeiro que existir vence.
 **Skills**
 
 Uma skill em `{projeto}/brain/engineering/` sobrescreve a equivalente do kit **para aquele
-projeto**. E como um projeto mantem o padrao de identificadores em pt-BR sem que isso vire regra
+projeto**. E como um projeto mantém o padrão de identificadores em pt-BR sem que isso vire regra
 para os demais.
 
 ---
@@ -108,12 +108,12 @@ O kit instala hooks que **recusam a escrita** quando a regra e violada:
 |---|---|
 | `no_dispatcher` | `MediatR`, `IMediator`, `IRequestHandler<>` e equivalentes em `.cs` |
 | `comment_budget` | bloco de comentario acima de cinco linhas, marca de severidade |
-| `dod_docs` | tipo publico novo enquanto `README.md` e `ARCHITECTURE.md` nao mudarem |
+| `dod_docs` | tipo público novo enquanto `README.md` e `ARCHITECTURE.md` não mudarem |
 
-Ignoram arquivo de teste, arquivo fora de repositorio git, e o que nao e `.cs`.
+Ignoram arquivo de teste, arquivo fora de repositório git, e o que não e `.cs`.
 
-Em repositorio legado, isso aparece na primeira edicao. Se a base ainda nao esta em conformidade,
-desabilite o hook no `settings.json` do projeto ate estar — nao contorne arquivo a arquivo.
+Em repositório legado, isso aparece na primeira edição. Se a base ainda não está em conformidade,
+desabilite o hook no `settings.json` do projeto até estar — não contorne arquivo a arquivo.
 
 ---
 
@@ -123,7 +123,7 @@ desabilite o hook no `settings.json` do projeto ate estar — nao contorne arqui
 /plugin update bks-sdd-kit@bks-sdd-kit
 ```
 
-O vault nao e afetado: o kit nao escreve nele fora do que os comandos gravam a seu pedido.
+O vault não e afetado: o kit não escreve nele fora do que os comandos gravam a seu pedido.
 
-Se uma atualizacao mudar o formato de um arquivo de estado — `STATUS.md`, `.bks-profile.json` — o
-kit traz nota de migracao em `docs/MIGRATION.md`.
+Se uma atualização mudar o formato de um arquivo de estado — `STATUS.md`, `.bks-profile.json` — o
+kit traz nota de migração em `docs/MIGRATION.md`.

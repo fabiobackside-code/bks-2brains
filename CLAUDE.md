@@ -1,52 +1,52 @@
 # bks-2brains — vault
 
-Voce esta na raiz do vault. Aqui se **decide** em que trabalhar; o trabalho acontece dentro do
-repositorio de cada projeto.
+Você está na raiz do vault. Aqui se **decide** em que trabalhar; o trabalho acontece dentro do
+repositório de cada projeto.
 
-## O que este repositorio e
+## O que este repositório é
 
-O vault guarda o que atravessa projetos: perfil, base de conhecimento e decisoes sobre o proprio
-processo. Ferramenta nao mora aqui — skills, comandos, agentes e templates vem do plugin
+O vault guarda o que atravessa projetos: perfil, base de conhecimento e decisões sobre o próprio
+processo. Ferramenta não mora aqui — skills, comandos, agentes e templates vêm do plugin
 `bks-sdd-kit`.
 
 ```
-workbench/     perfil, decisoes de processo
+workbench/     perfil, decisões de processo
 knowledge/     base transversal: wiki, material bruto, ingest
 repos/         os projetos, por categoria
 docs/          os guias deste vault
 ```
 
-## O que fazer numa sessao aberta aqui
+## O que fazer numa sessão aberta aqui
 
 Rode `/brain`. Ele monta o panorama de todos os projetos a partir dos `STATUS.md` e diz qual tem
 trabalho pronto para seguir.
 
-Para trabalhar num projeto, abra uma sessao nova na pasta dele. Os comandos de projeto escrevem no
-repositorio onde a sessao esta aberta — rodar daqui gravaria no lugar errado.
+Para trabalhar num projeto, abra uma sessão nova na pasta dele. Os comandos de projeto escrevem no
+repositório onde a sessão está aberta — rodar daqui gravaria no lugar errado.
 
-`/new-project` e a excecao: roda aqui, cria em `repos/{categoria}/{nome}/`.
+`/new-project` é a exceção: roda aqui, cria em `repos/{categoria}/{nome}/`.
 
 ## Antes de responder qualquer coisa
 
-Leia `workbench/profile.md`. Ele diz quem e o usuario e como ele trabalha.
+Leia `workbench/profile.md`. Ele diz quem é o usuário e como ele trabalha.
 
-Se o arquivo nao existir, o vault ainda nao foi configurado: aponte `docs/SETUP.md` e ofereca
+Se o arquivo não existir, o vault ainda não foi configurado: aponte `docs/SETUP.md` e ofereça
 partir de `workbench/profile.example.md`.
 
 ## Onde uma coisa nova vai
 
 | O que | Onde |
 |---|---|
-| Sobre o usuario, vale para todo projeto | `workbench/` |
+| Sobre o usuário, vale para todo projeto | `workbench/` |
 | Conhecimento geral, mais de um projeto | `knowledge/` |
-| O que um produto e | `repos/.../brain/domain/` |
-| Como se constroi num projeto | `repos/.../brain/engineering/` |
-| Decisao fechada de um projeto | `repos/.../decisions/` |
-| Ferramenta, template, skill reusavel | `bks-sdd-kit`, nao aqui |
+| O que um produto é | `repos/.../brain/domain/` |
+| Como se constrói num projeto | `repos/.../brain/engineering/` |
+| Decisão fechada de um projeto | `repos/.../decisions/` |
+| Ferramenta, template, skill reusável | `bks-sdd-kit`, não aqui |
 
 Detalhes em `docs/ESTRUTURA.md`.
 
 ## Idioma
 
-Documentacao e artefatos em portugues do Brasil. Codigo, nomes de tipo, metodo e variavel em
-ingles.
+Documentação e artefatos em português do Brasil. Código, nomes de tipo, método e variável em
+inglês.

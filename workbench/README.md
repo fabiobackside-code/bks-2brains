@@ -1,12 +1,12 @@
 # workbench — o que e seu
 
-Guarda o que atravessa todo projeto: quem voce e e como voce decidiu trabalhar.
+Guarda o que atravessa todo projeto: quem você e e como você decidiu trabalhar.
 
 | Arquivo | Guarda |
 |---|---|
-| `profile.md` | quem voce e: papel, stack, arquitetura padrao, regras inegociaveis |
-| `decisions/` | ADRs sobre o **processo**, nao sobre um projeto |
-| `knowledge-guide.md` | como voce consulta a sua base de conhecimento |
+| `profile.md` | quem você e: papel, stack, arquitetura padrão, regras inegociáveis |
+| `decisions/` | ADRs sobre o **processo**, não sobre um projeto |
+| `knowledge-guide.md` | como você consulta a sua base de conhecimento |
 
 ## Comecando
 
@@ -14,24 +14,24 @@ Guarda o que atravessa todo projeto: quem voce e e como voce decidiu trabalhar.
 cp profile.example.md profile.md
 ```
 
-Abra e reescreva. O passo a passo esta em [`../docs/SETUP.md`](../docs/SETUP.md), secao 3.
+Abra e reescreva. O passo a passo está em [`../docs/SETUP.md`](../docs/SETUP.md), seção 3.
 
-O `profile.md` e o unico arquivo lido em **toda** sessao, de qualquer projeto — vale mais que
-qualquer outra documentacao do vault.
+O `profile.md` e o único arquivo lido em **toda** sessão, de qualquer projeto — vale mais que
+qualquer outra documentação do vault.
 
-## Nao entra aqui
+## Não entra aqui
 
 | O que | Vai para |
 |---|---|
-| Padrao tecnico reusavel | o kit, em `skills/bks-standards/` |
+| Padrão técnico reusável | o kit, em `skills/bks-standards/` |
 | Estado de um projeto | o `STATUS.md` daquele projeto |
 | Template | o kit, em `templates/` |
-| Conhecimento tecnico geral | `knowledge/wiki/` |
+| Conhecimento técnico geral | `knowledge/wiki/` |
 
 Um ADR aqui responde *"por que eu trabalho assim"*. Um ADR num projeto responde *"por que este
 projeto e assim"*.
 
 ## Versionamento
 
-`profile.md` **nao sobe** para o repositorio publico — e seu. Sobem apenas este README e o
+`profile.md` **não sobe** para o repositório público — e seu. Sobem apenas este README e o
 `profile.example.md`.

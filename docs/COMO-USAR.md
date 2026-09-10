@@ -1,12 +1,12 @@
 # Como usar
 
-O ciclo de trabalho, do primeiro material bruto ate o codigo entregue.
+O ciclo de trabalho, do primeiro material bruto até o código entregue.
 
 ---
 
 ## O gesto de todo dia
 
-**Nao sabe em que mexer?** Abra a sessao na raiz do vault:
+**Não sabe em que mexer?** Abra a sessão na raiz do vault:
 
 ```
 cd /caminho/do/vault
@@ -14,10 +14,10 @@ claude
 /brain
 ```
 
-Sai o panorama: todos os projetos, em que fase, o que trava, quando foi tocado pela ultima vez.
-Voce escolhe.
+Sai o panorama: todos os projetos, em que fase, o que trava, quando foi tocado pela última vez.
+Você escolhe.
 
-**Ja sabe?** Abra direto no projeto:
+**Já sabe?** Abra direto no projeto:
 
 ```
 cd /caminho/do/vault/repos/backside/meu-projeto
@@ -25,12 +25,12 @@ claude
 /brain
 ```
 
-Sai o `STATUS.md`: onde parou, o que trava, proximo passo.
+Sai o `STATUS.md`: onde parou, o que trava, próximo passo.
 
-Mesmo comando. O que muda e de onde voce chama.
+Mesmo comando. O que muda e de onde você chama.
 
-> **Por que nao se trabalha a partir da raiz.** Os comandos de projeto — `/spec`, `/loop`,
-> `/save` — escrevem no repositorio onde a sessao esta aberta. Rodar da raiz gravaria no lugar
+> **Por que não se trabalha a partir da raiz.** Os comandos de projeto — `/spec`, `/loop`,
+> `/save` — escrevem no repositório onde a sessão está aberta. Rodar da raiz gravaria no lugar
 > errado. A raiz serve para decidir; o trabalho acontece dentro do projeto.
 
 ---
@@ -53,10 +53,10 @@ Os perfis:
 
 | Perfil | Gera |
 |---|---|
-| `docs` | escopo, arquitetura, apresentacao — sem codigo |
-| `fullstack` | documentacao, design, front, back, banco, infra |
-| `frontend` | design, mocks, componentes, integracao |
-| `backend` | API, dominio, persistencia, scripts |
+| `docs` | escopo, arquitetura, apresentação — sem código |
+| `fullstack` | documentação, design, front, back, banco, infra |
+| `frontend` | design, mocks, componentes, integração |
+| `backend` | API, domínio, persistência, scripts |
 | `component` | biblioteca, SDK, pacote |
 | `infra` | IaC, pipeline, observabilidade |
 | `data` | ETL, modelagem, BI |
@@ -66,9 +66,9 @@ Os perfis:
 O perfil determina quais fases se aplicam. Projeto `docs` nunca recebe pergunta sobre banco de
 dados.
 
-### Do material bruto ao codigo
+### Do material bruto ao código
 
-Todos os passos abaixo rodam **com a sessao aberta na raiz do projeto**.
+Todos os passos abaixo rodam **com a sessão aberta na raiz do projeto**.
 
 **1 · Material entra**
 
@@ -76,8 +76,8 @@ Todos os passos abaixo rodam **com a sessao aberta na raiz do projeto**.
 /note arquitetura pretendida
 ```
 
-Escreve em `docs/input/notas/`. Nota viva: cresce ao longo dos dias, com secao
-`## Estado em AAAA-MM-DD`. Nunca decisao fechada — decisao vira ADR.
+Escreve em `docs/input/notas/`. Nota viva: cresce ao longo dos dias, com seção
+`## Estado em AAAA-MM-DD`. Nunca decisão fechada — decisão vira ADR.
 
 Material de terceiros vai a mao para `docs/input/research/`.
 
@@ -110,7 +110,7 @@ Do `CONTEXT.md` sai o PRD: o que o produto e, para quem, e o que conta como pron
 Entrevista por bounded context. Gera `specs/features/FEAT-*.md`. Aprovado, gera
 `specs/tests/TEST-*.md`. Aprovado, gera `specs/tasks/TASK-*.md`.
 
-As tres aprovacoes importam. Spec sem teste vira codigo sem criterio de aceite.
+As três aprovações importam. Spec sem teste vira código sem critério de aceite.
 
 **5 · Arquitetura**
 
@@ -118,7 +118,7 @@ As tres aprovacoes importam. Spec sem teste vira codigo sem criterio de aceite.
 /arch
 ```
 
-Gera `outputs/ARCH-{projeto}.md` e atualiza o `README.md`. Diagramas na notacao BKS.
+Gera `outputs/ARCH-{projeto}.md` e atualiza o `README.md`. Diagramas na notação BKS.
 
 **6 · Implementar**
 
@@ -126,8 +126,8 @@ Gera `outputs/ARCH-{projeto}.md` e atualiza o `README.md`. Diagramas na notacao 
 /loop
 ```
 
-Implementa uma task sob LOOP-4: ate quatro tentativas contra goals verificaveis — build limpo,
-testes verdes, cenarios da `TEST` cobertos.
+Implementa uma task sob LOOP-4: até quatro tentativas contra goals verificáveis — build limpo,
+testes verdes, cenários da `TEST` cobertos.
 
 **7 · Revisar**
 
@@ -135,19 +135,19 @@ testes verdes, cenarios da `TEST` cobertos.
 /review
 ```
 
-Revisao independente, read-only, em invocacao separada de quem implementou.
+Revisão independente, read-only, em invocação separada de quem implementou.
 
-**8 · Fechar a sessao**
+**8 · Fechar a sessão**
 
 ```
 /save
 ```
 
-Roteia o que a sessao produziu: decisoes para `decisions/`, specs para `specs/`, reescreve o
+Roteia o que a sessão produziu: decisões para `decisions/`, specs para `specs/`, reescreve o
 `STATUS.md`, acrescenta o marco no `JOURNAL.md`.
 
-**Sempre feche com `/save`.** E ele que mantem o `STATUS.md` util — e o `STATUS.md` e o que o
-`/brain` le da proxima vez.
+**Sempre feche com `/save`.** E ele que mantém o `STATUS.md` util — e o `STATUS.md` e o que o
+`/brain` le da próxima vez.
 
 ---
 
@@ -159,35 +159,35 @@ claude
 /brain
 ```
 
-O panorama mostra o que estava ativo e o que travou. Escolha, abra a sessao no projeto, e rode
+O panorama mostra o que estava ativo e o que travou. Escolha, abra a sessão no projeto, e rode
 `/brain` de novo — agora ele le o `STATUS.md` daquele projeto.
 
-Se o `STATUS.md` estiver velho em relacao ao `JOURNAL.md` ou ao git, o `/brain` avisa e oferece
+Se o `STATUS.md` estiver velho em relação ao `JOURNAL.md` ou ao git, o `/brain` avisa e oferece
 atualizar.
 
 ---
 
 ## Conhecimento
 
-**Do projeto** — o que o produto e vai para `brain/domain/`; como se constroi ali vai para
+**Do projeto** — o que o produto e vai para `brain/domain/`; como se constrói ali vai para
 `brain/engineering/`.
 
 **Transversal** — vale para mais de um projeto, ou para nenhum em particular: vai para
 `knowledge/` do vault. Material bruto entra em `knowledge/raw/_inbox/` e o `/ingest` classifica.
 
-A regra: se so faz sentido dentro de um projeto, e do projeto.
+A regra: se só faz sentido dentro de um projeto, e do projeto.
 
 ---
 
 ## O que o kit traz
 
-O vault nao tem comandos nem skills. Vem tudo do plugin `bks-sdd-kit`:
+O vault não tem comandos nem skills. Vem tudo do plugin `bks-sdd-kit`:
 
 | | |
 |---|---|
 | Skills | `bks-sdd`, `bks-dotnet-solutions`, `bks-typescript-solutions`, `bks-tests`, `bks-arch`, `bks-standards`, `bks-create-plan-tasks` |
 | Comandos | `/brain` `/new-project` `/note` `/canonize` `/prd` `/spec` `/arch` `/loop` `/review` `/save` |
 | Agentes | `planner` `builder` `reviewer` `scribe` |
-| Guardas | recusam MediatR, comentario acima de cinco linhas, e tipo publico sem documentacao |
+| Guardas | recusam MediatR, comentario acima de cinco linhas, e tipo público sem documentação |
 
 Detalhes em [`INTEGRACAO-KIT.md`](INTEGRACAO-KIT.md).
