@@ -39,6 +39,7 @@ partir de `workbench/profile.example.md`.
 |---|---|
 | Sobre o usuário, vale para todo projeto | `workbench/` |
 | Conhecimento geral, mais de um projeto | `knowledge/` |
+| Lição prática de Go, anonimizada | `knowledge/wiki/go/` |
 | O que um produto é | `repos/.../brain/domain/` |
 | Como se constrói num projeto | `repos/.../brain/engineering/` |
 | Decisão fechada de um projeto | `repos/.../decisions/` |
