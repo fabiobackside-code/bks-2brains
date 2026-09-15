@@ -28,7 +28,7 @@ Por isso `dotnet-standards.md` foi para o kit — e método, reusável. E `profi
 
 ```
 /plugin marketplace add fabiobackside-code/bks-sdd-kit
-/plugin install bks-sdd-kit@bks-sdd-kit
+/plugin install bks@bks-sdd-kit
 ```
 
 **2 · O vault**

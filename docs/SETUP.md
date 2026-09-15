@@ -62,7 +62,7 @@ O vault não tem comando nenhum. Skills, comandos, agentes e guardas vêm do plu
 ```bash
 git clone https://github.com/fabiobackside-code/bks-sdd-kit ~/bks-sdd-kit
 claude plugin marketplace add ~/bks-sdd-kit
-claude plugin install bks-sdd-kit@bks-sdd-kit
+claude plugin install bks@bks-sdd-kit
 ```
 
 Conferir:
@@ -71,7 +71,13 @@ Conferir:
 claude plugin list
 ```
 
-`bks-sdd-kit` deve aparecer com escopo `user` — global, vale em qualquer pasta.
+O plugin `bks` deve aparecer com escopo `user` — global, vale em qualquer pasta. O nome do plugin
+é `bks`, o do repositório e do marketplace é `bks-sdd-kit`; é de `bks` que sai o prefixo dos
+comandos.
+
+Confira também que os comandos respondem: abra uma sessão e digite `/bks:` — a lista deve mostrar
+`brain`, `save`, `canonize` e os demais. Se o plugin aparece em `plugin list` mas os comandos não
+surgem, reinicie a sessão: o `claude plugin install` avisa `Restart to apply changes`.
 
 ### Apontar o kit para o vault
 
@@ -159,7 +165,7 @@ raw/_inbox/  ──/ingest──>  raw/{tipo}/  +  wiki/{area}/
 **2 · Rode o ingest**, com a sessão aberta na raiz do vault:
 
 ```
-/ingest
+/bks:ingest
 ```
 
 Ele le o que está no inbox, classifica por tipo, move para a pasta certa em `raw/` e escreve o
@@ -217,7 +223,7 @@ A regra: **se só faz sentido dentro de um projeto, e do projeto.**
 Com a sessão aberta na raiz do vault:
 
 ```
-/new-project
+/bks:new-project
 ```
 
 Pergunta o nome, a categoria (`backside`, `w3`, `private` — renomeie como quiser) e o **perfil**,
@@ -250,7 +256,7 @@ Daqui em diante o ciclo de trabalho está em [`COMO-USAR.md`](COMO-USAR.md).
 ```
 cd /caminho/do/meu-vault
 claude
-/brain
+/bks:brain
 ```
 
 Deve sair o panorama — vazio, se você ainda não criou projeto. Se o comando não existir, o plugin

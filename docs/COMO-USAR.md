@@ -11,7 +11,7 @@ O ciclo de trabalho, do primeiro material bruto até o código entregue.
 ```
 cd /caminho/do/vault
 claude
-/brain
+/bks:brain
 ```
 
 Sai o panorama: todos os projetos, em que fase, o que trava, quando foi tocado pela última vez.
@@ -22,7 +22,7 @@ Você escolhe.
 ```
 cd /caminho/do/vault/repos/backside/meu-projeto
 claude
-/brain
+/bks:brain
 ```
 
 Sai o `STATUS.md`: onde parou, o que trava, próximo passo.
@@ -40,9 +40,9 @@ Mesmo comando. O que muda e de onde você chama.
 ### Comecar um projeto
 
 ```
-cd X:/2brains
+cd <raiz do seu vault>
 claude
-/new-project
+/bks:new-project
 ```
 
 Pergunta o nome, a categoria (`backside`, `w3`, `private`) e o **perfil** — o que o projeto gera.
@@ -73,7 +73,7 @@ Todos os passos abaixo rodam **com a sessão aberta na raiz do projeto**.
 **1 · Material entra**
 
 ```
-/note arquitetura pretendida
+/bks:note arquitetura pretendida
 ```
 
 Escreve em `docs/input/notas/`. Nota viva: cresce ao longo dos dias, com seção
@@ -84,7 +84,7 @@ Material de terceiros vai a mao para `docs/input/research/`.
 **2 · Consolidar**
 
 ```
-/canonize
+/bks:canonize
 ```
 
 Le tudo de `docs/input/` e `docs/design/` e escreve `docs/canonical/CONTEXT.md`. A partir daqui, e
@@ -96,7 +96,7 @@ formando.
 **3 · Produto**
 
 ```
-/prd
+/bks:prd
 ```
 
 Do `CONTEXT.md` sai o PRD: o que o produto e, para quem, e o que conta como pronto.
@@ -104,7 +104,7 @@ Do `CONTEXT.md` sai o PRD: o que o produto e, para quem, e o que conta como pron
 **4 · Especificar**
 
 ```
-/spec
+/bks:spec
 ```
 
 Entrevista por bounded context. Gera `specs/features/FEAT-*.md`. Aprovado, gera
@@ -115,7 +115,7 @@ As três aprovações importam. Spec sem teste vira código sem critério de ace
 **5 · Arquitetura**
 
 ```
-/arch
+/bks:arch
 ```
 
 Gera `outputs/ARCH-{projeto}.md` e atualiza o `README.md`. Diagramas na notação BKS.
@@ -123,7 +123,7 @@ Gera `outputs/ARCH-{projeto}.md` e atualiza o `README.md`. Diagramas na notaçã
 **6 · Implementar**
 
 ```
-/loop
+/bks:loop
 ```
 
 Implementa uma task sob LOOP-4: até quatro tentativas contra goals verificáveis — build limpo,
@@ -132,7 +132,7 @@ testes verdes, cenários da `TEST` cobertos.
 **7 · Revisar**
 
 ```
-/review
+/bks:review
 ```
 
 Revisão independente, read-only, em invocação separada de quem implementou.
@@ -140,7 +140,7 @@ Revisão independente, read-only, em invocação separada de quem implementou.
 **8 · Fechar a sessão**
 
 ```
-/save
+/bks:save
 ```
 
 Roteia o que a sessão produziu: decisões para `decisions/`, specs para `specs/`, reescreve o
@@ -156,7 +156,7 @@ Roteia o que a sessão produziu: decisões para `decisions/`, specs para `specs/
 ```
 cd /caminho/do/vault
 claude
-/brain
+/bks:brain
 ```
 
 O panorama mostra o que estava ativo e o que travou. Escolha, abra a sessão no projeto, e rode

@@ -35,7 +35,7 @@ de sessão; resume em ~5 linhas quem você é, onde parou, próximo passo.
 **Produz:** um resumo em texto — nenhum arquivo.
 **Exemplo:**
 ```
-/brain
+/bks:brain
 → "Você é o Arquiteto Sênior BKS. Projeto ativo: bks-marine (backside), fase design.
    Última sessão: montei a estrutura e aprovamos a stack .NET 10 + Supabase.
    Próximo passo: revisar/aprovar o FEAT-autenticacao e gerar o TEST."
@@ -54,7 +54,7 @@ tasks}/`, `decisions/`, `outputs/`, `docs/input/{scope,interviews,research,asset
 `CLAUDE.md` e a estrutura de specs e decisões.
 **Exemplo:**
 ```
-/new-project bks-marine backside
+/bks:new-project bks-marine backside
 → cria repos/backside/{nome}/ com a estrutura canônica; próximo passo sugerido:
   "traga material para docs/input/ e rode /canonize"
 ```
@@ -70,7 +70,7 @@ novo relevante (rodar de novo é normal e esperado).
 **Produz:** `docs/canonical/CONTEXT.md` + `docs/prompts/prompt-canonize-*.md`.
 **Exemplo:**
 ```
-/canonize
+/bks:canonize
 → lê docs/input/scope/proposta.pdf + docs/input/interviews/entrevista-01.md, gera
   docs/canonical/CONTEXT.md v1 com 3 perguntas em "## Perguntas em aberto"
 ```
@@ -86,7 +86,7 @@ só cita `docs/canonical/`.
 **Produz:** `docs/canonical/PRD-{projeto}.md`.
 **Exemplo:**
 ```
-/prd
+/bks:prd
 → gera docs/canonical/PRD-bks-marine.md a partir do CONTEXT.md v2; aponta 2 perguntas em
   aberto que ainda bloqueiam o requisito de auditoria
 ```
@@ -104,7 +104,7 @@ critérios de aceite verificáveis); gera a `FEAT-[nome].md`. Depois de aprovada
 **Produz:** `{repo}/specs/features/FEAT-*.md` e, após aprovação, `{repo}/specs/tests/TEST-*.md`.
 **Exemplo real (já feito no bks-marine):**
 ```
-/spec
+/bks:spec
 → "Qual o bounded context?" — Identidade & Acesso
 → "Auth própria ou gerenciada?" — própria no .NET
 → gera specs/features/FEAT-autenticacao.md (status: Rascunho)
@@ -119,7 +119,7 @@ TCP se houver.
 **Produz:** `{repo}/outputs/ARCH-{projeto}.md` + `README.md` do repo.
 **Exemplo:**
 ```
-/arch bks-marine
+/bks:arch bks-marine
 → outputs/ARCH-bks-marine.md com C4 mostrando App RN + Painel React → API .NET 10 → Supabase
 ```
 
@@ -132,7 +132,7 @@ do TEST cobertos, código fiel ao `user_profile.md`). Falhou 4x → gera `BLOQUE
 **Produz:** código + testes; ou `outputs/BLOQUEIO-[task].md`.
 **Exemplo:**
 ```
-/loop
+/bks:loop
 → tentativa 1: implementa AutenticarUsuario, roda build+test, G3 (cenários do TEST) falha
 → tentativa 2: corrige o hash bcrypt, todos os goals passam → conclui, roda /save
 ```
@@ -148,7 +148,7 @@ relativos de `decisions/`, `specs/` e `outputs/` resolvem contra o repo onde a s
 **Produz:** os arquivos acima, listados no chat antes de finalizar.
 **Exemplo:**
 ```
-/save
+/bks:save
 → "Gravei ADR-003 em decisions/ (stack .NET 10 + Supabase), reescrevi o STATUS.md,
    criei sessions/sessao-2026-08-12.md"
 ```
@@ -170,10 +170,10 @@ permanente da wiki.
 `wiki/log.md`.
 **Exemplo:**
 ```
-/ingest raw/papers/hexagonal-architecture.pdf
+/bks:ingest raw/papers/hexagonal-architecture.pdf
 → cria wiki/architecture/hexagonal-architecture.md, registra em index.md e log.md
 
-/ingest raw/_inbox/
+/bks:ingest raw/_inbox/
 → classifica cada arquivo da pasta pela extensão, ingere um a um, resume:
   "✓ 4 processados, ✗ 1 falhou: video.mp4 (falta transcrição)"
 ```
@@ -202,7 +202,7 @@ o template de manifesto do kit. Sem manifesto, `/bks:review` orienta a criar um 
 explícita do escopo verificado, se nada foi encontrado.
 **Exemplo (cenário hipotético, adaptado do exemplo-fintech do repo original):**
 ```
-/review
+/bks:review
 → dashboard_query.go:88
    Problema: query de agregação não filtra por InquilinoId
    Exploração: qualquer usuário autenticado vê o somatório de todos os inquilinos
