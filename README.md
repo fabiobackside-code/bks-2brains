@@ -97,7 +97,10 @@ O ciclo completo está em [`docs/COMO-USAR.md`](docs/COMO-USAR.md).
 | [`docs/SETUP.md`](docs/SETUP.md) | do clone a primeira sessão: instalar, configurar, alimentar |
 | [`docs/COMO-USAR.md`](docs/COMO-USAR.md) | o ciclo de trabalho, do inicio ao fim |
 | [`docs/ESTRUTURA.md`](docs/ESTRUTURA.md) | cada diretório, o que entra e o que não entra |
+| [`docs/CONHECIMENTO.md`](docs/CONHECIMENTO.md) | alimentar o acervo: fontes, erros, decisões |
+| [`docs/MANUAL-COMANDOS.md`](docs/MANUAL-COMANDOS.md) | referência por comando: o que faz, onde rodar |
 | [`docs/INTEGRACAO-KIT.md`](docs/INTEGRACAO-KIT.md) | como vault e kit se encontram |
+| [`docs/OBSIDIAN.md`](docs/OBSIDIAN.md) | ler e navegar o vault no Obsidian (opcional) |
 
 ## O que este repositório não publica
 
