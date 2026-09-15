@@ -80,7 +80,7 @@ Como usar o vault. Não e conhecimento técnico — isso e `knowledge/`.
 
 ## Projeto
 
-Todo projeto criado pelo `/new-project` nasce assim:
+Todo projeto criado pelo `/bks:new-project` nasce assim:
 
 ```
 {{projeto}}/
@@ -116,11 +116,11 @@ Todo projeto criado pelo `/new-project` nasce assim:
 
 | Arquivo | Responde | Escrito por | Reescrito? |
 |---|---|---|---|
-| `STATUS.md` | onde o projeto está **agora** | `/save` | sim, por inteiro |
-| `JOURNAL.md` | como chegou até aqui | `/save` | não, só acrescenta |
-| `WORKFLOW.md` | como se trabalha aqui | `/new-project` | só quando o fluxo muda |
+| `STATUS.md` | onde o projeto está **agora** | `/bks:save` | sim, por inteiro |
+| `JOURNAL.md` | como chegou até aqui | `/bks:save` | não, só acrescenta |
+| `WORKFLOW.md` | como se trabalha aqui | `/bks:new-project` | só quando o fluxo muda |
 
-O `STATUS.md` e o ponto de entrada. O `/brain` le ele.
+O `STATUS.md` e o ponto de entrada. O `/bks:brain` le ele.
 
 ### `brain/domain/` contra `brain/engineering/`
 
@@ -148,5 +148,29 @@ E o que o produto E?                             → {projeto}/brain/domain/
 E como se constrói neste projeto?                → {projeto}/brain/engineering/
 E uma decisão fechada deste projeto?             → {projeto}/decisions/
 E material bruto ainda não consolidado?          → {projeto}/docs/input/
-E ferramenta, template, skill reusável?          → bks-sdd-kit, não aqui
+E ferramenta, template, skill reusável?          → o plugin bks, não aqui
 ```
+
+---
+
+## Convenções que não se negociam
+
+- **Idioma:** nome de pasta e de arquivo em inglês; conteúdo e conversa em PT-BR; código em inglês.
+- **Encoding:** UTF-8 sem BOM, quebras de linha `
+`. Vale para todo arquivo do vault.
+- **`knowledge/raw/` é imutável.** A fonte nunca é editada — só a página curada em `wiki/` evolui
+  a partir dela. É o que permite conferir de onde uma afirmação veio.
+- **Segurança:** nunca gravar segredo, token ou dado de cliente no vault. Ele é versionado e o
+  repositório é público; o que está em `knowledge/` fica fora do git, mas o resto sobe.
+
+## O que este arranjo busca
+
+Três objetivos, e nenhum deles é organização pela organização:
+
+- **Assertividade** — decisão ancorada na wiki e nas specs, não em achismo.
+- **Menos alucinação** — o agente consulta a base curada antes de gerar, e marca o que é incerto
+  em vez de chutar.
+- **Menos tokens** — conteúdo curto, delimitado e cruzado por links, lido sob demanda, em vez de
+  reexplicar tudo a cada sessão.
+
+Como alimentar a base que sustenta os três: [`CONHECIMENTO.md`](CONHECIMENTO.md).

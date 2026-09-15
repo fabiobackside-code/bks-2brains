@@ -56,7 +56,7 @@ Em `~/.claude/settings.json`:
 
 | Variável | Aponta para | Quem usa |
 |---|---|---|
-| `BKS_VAULT` | raiz do vault | `/brain` no modo panorama, `/new-project` |
+| `BKS_VAULT` | raiz do vault | `/bks:brain` no modo panorama, `/bks:new-project` |
 | `BKS_KNOWLEDGE` | `knowledge/` | consulta a base transversal |
 
 São duas, não três. A antiga `BKS_BRAIN` apontava para um hub central que não existe mais —
@@ -67,11 +67,11 @@ memória e decisão agora vivem dentro de cada projeto.
 ## Sem uma das partes
 
 **Kit sem vault.** Funciona. As skills operam sobre o diretório atual e não leem o vault. Os
-comandos de projeto — `/note`, `/canonize`, `/spec`, `/arch`, `/loop`, `/review`, `/save` —
+comandos de projeto — `/bks:note`, `/bks:canonize`, `/bks:spec`, `/bks:arch`, `/bks:loop`, `/bks:review`, `/bks:save` —
 trabalham dentro do repositório onde a sessão está aberta.
 
-Só dois comandos precisam do vault: `/brain` no modo panorama (que percorre `repos/`) e
-`/new-project` (que cria dentro dele). Sem `BKS_VAULT`, ambos perguntam onde trabalhar.
+Só dois comandos precisam do vault: `/bks:brain` no modo panorama (que percorre `repos/`) e
+`/bks:new-project` (que cria dentro dele). Sem `BKS_VAULT`, ambos perguntam onde trabalhar.
 
 **Vault sem kit.** Os arquivos continuam legíveis — são markdown. O que se perde são os comandos e
 as skills. O `STATUS.md` de cada projeto segue sendo o ponto de entrada, só que lido a mao.

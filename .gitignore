@@ -17,11 +17,6 @@
 /STATUS.md
 /JOURNAL.md
 
-# --- docs do layout anterior: mantidos localmente, fora do template ---
-/docs/CONTEXT.md
-/docs/GUIA-OBSIDIAN-CLAUDE.md
-/docs/MANUAL-COMANDOS.md
-
 # --- perfil pessoal: cada um escreve o seu ---
 /workbench/**
 !/workbench/

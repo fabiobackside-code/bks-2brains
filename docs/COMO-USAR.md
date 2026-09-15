@@ -29,8 +29,8 @@ Sai o `STATUS.md`: onde parou, o que trava, próximo passo.
 
 Mesmo comando. O que muda e de onde você chama.
 
-> **Por que não se trabalha a partir da raiz.** Os comandos de projeto — `/spec`, `/loop`,
-> `/save` — escrevem no repositório onde a sessão está aberta. Rodar da raiz gravaria no lugar
+> **Por que não se trabalha a partir da raiz.** Os comandos de projeto — `/bks:spec`, `/bks:loop`,
+> `/bks:save` — escrevem no repositório onde a sessão está aberta. Rodar da raiz gravaria no lugar
 > errado. A raiz serve para decidir; o trabalho acontece dentro do projeto.
 
 ---
@@ -146,8 +146,8 @@ Revisão independente, read-only, em invocação separada de quem implementou.
 Roteia o que a sessão produziu: decisões para `decisions/`, specs para `specs/`, reescreve o
 `STATUS.md`, acrescenta o marco no `JOURNAL.md`.
 
-**Sempre feche com `/save`.** E ele que mantém o `STATUS.md` util — e o `STATUS.md` e o que o
-`/brain` le da próxima vez.
+**Sempre feche com `/bks:save`.** E ele que mantém o `STATUS.md` util — e o `STATUS.md` e o que o
+`/bks:brain` le da próxima vez.
 
 ---
 
@@ -160,9 +160,9 @@ claude
 ```
 
 O panorama mostra o que estava ativo e o que travou. Escolha, abra a sessão no projeto, e rode
-`/brain` de novo — agora ele le o `STATUS.md` daquele projeto.
+`/bks:brain` de novo — agora ele le o `STATUS.md` daquele projeto.
 
-Se o `STATUS.md` estiver velho em relação ao `JOURNAL.md` ou ao git, o `/brain` avisa e oferece
+Se o `STATUS.md` estiver velho em relação ao `JOURNAL.md` ou ao git, o `/bks:brain` avisa e oferece
 atualizar.
 
 ---
@@ -173,7 +173,7 @@ atualizar.
 `brain/engineering/`.
 
 **Transversal** — vale para mais de um projeto, ou para nenhum em particular: vai para
-`knowledge/` do vault. Material bruto entra em `knowledge/raw/_inbox/` e o `/ingest` classifica.
+`knowledge/` do vault. Material bruto entra em `knowledge/raw/_inbox/` e o `/bks:ingest` classifica.
 
 A regra: se só faz sentido dentro de um projeto, e do projeto.
 
@@ -186,7 +186,7 @@ O vault não tem comandos nem skills. Vem tudo do plugin `bks-sdd-kit`:
 | | |
 |---|---|
 | Skills | `bks-sdd`, `bks-dotnet-solutions`, `bks-typescript-solutions`, `bks-tests`, `bks-arch`, `bks-standards`, `bks-create-plan-tasks` |
-| Comandos | `/brain` `/new-project` `/note` `/canonize` `/prd` `/spec` `/arch` `/loop` `/review` `/save` |
+| Comandos | `/bks:brain` `/bks:new-project` `/bks:note` `/bks:canonize` `/bks:prd` `/bks:spec` `/bks:arch` `/bks:loop` `/bks:review` `/bks:save` |
 | Agentes | `planner` `builder` `reviewer` `scribe` |
 | Guardas | recusam MediatR, comentario acima de cinco linhas, e tipo público sem documentação |
 
