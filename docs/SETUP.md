@@ -57,7 +57,7 @@ git push -u origin main
 ## 2 · Instalar o kit
 
 O vault não tem comando nenhum. Skills, comandos, agentes e guardas vêm do plugin
-[`bkhar`](https://github.com/fabiobackside-code/Bks-Harness), do repositório `Bks-Harness`,, instalado uma vez por maquina:
+[`bkhar`](https://github.com/fabiobackside-code/Bks-Harness), do repositório `Bks-Harness`, instalado uma vez por maquina:
 
 ```bash
 claude plugin marketplace add fabiobackside-code/Bks-Harness

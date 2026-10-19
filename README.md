@@ -5,7 +5,7 @@ o conteúdo e seu, e nasce vazio.
 
 Um vault guarda o que atravessa projetos: quem você e, o que você aprendeu, e as decisões sobre
 como você trabalha. Não guarda ferramenta — skills, comandos, agentes e templates vêm do plugin
-[`bkhar`](https://github.com/fabiobackside-code/Bks-Harness), do repositório `Bks-Harness`,, que se instala uma vez e serve
+[`bkhar`](https://github.com/fabiobackside-code/Bks-Harness), do repositório `Bks-Harness`, que se instala uma vez e serve
 qualquer maquina.
 
 ## A divisão
