@@ -6,7 +6,7 @@ Como o vault e o plugin se encontram, e o que acontece quando um dos dois não e
 
 ## A divisão
 
-| | `bks-2brains` | `bks-sdd-kit` |
+| | `bks-2brains` | `Bks-Harness` (plugin `bkhar`) |
 |---|---|---|
 | E | o vault | o motor |
 | Guarda | conhecimento, perfil, projetos | skills, comandos, agentes, hooks, templates |
@@ -27,8 +27,8 @@ Por isso `dotnet-standards.md` foi para o kit — e método, reusável. E `profi
 **1 · O kit**
 
 ```
-/plugin marketplace add fabiobackside-code/bks-sdd-kit
-/plugin install bks@bks-sdd-kit
+/plugin marketplace add fabiobackside-code/Bks-Harness
+/plugin install bkhar@bks-harness
 ```
 
 **2 · O vault**
@@ -56,7 +56,7 @@ Em `~/.claude/settings.json`:
 
 | Variável | Aponta para | Quem usa |
 |---|---|---|
-| `BKS_VAULT` | raiz do vault | `/bks:brain` no modo panorama, `/bks:new-project` |
+| `BKS_VAULT` | raiz do vault | `/bkhar:brain` no modo panorama, `/bkhar:new-project` |
 | `BKS_KNOWLEDGE` | `knowledge/` | consulta a base transversal |
 
 São duas, não três. A antiga `BKS_BRAIN` apontava para um hub central que não existe mais —
@@ -67,11 +67,11 @@ memória e decisão agora vivem dentro de cada projeto.
 ## Sem uma das partes
 
 **Kit sem vault.** Funciona. As skills operam sobre o diretório atual e não leem o vault. Os
-comandos de projeto — `/bks:note`, `/bks:canonize`, `/bks:spec`, `/bks:arch`, `/bks:loop`, `/bks:review`, `/bks:save` —
+comandos de projeto — `/bkhar:note`, `/bkhar:canonize`, `/bkhar:spec`, `/bkhar:arch`, `/bkhar:loop`, `/bkhar:review`, `/bkhar:save` —
 trabalham dentro do repositório onde a sessão está aberta.
 
-Só dois comandos precisam do vault: `/bks:brain` no modo panorama (que percorre `repos/`) e
-`/bks:new-project` (que cria dentro dele). Sem `BKS_VAULT`, ambos perguntam onde trabalhar.
+Só dois comandos precisam do vault: `/bkhar:brain` no modo panorama (que percorre `repos/`) e
+`/bkhar:new-project` (que cria dentro dele). Sem `BKS_VAULT`, ambos perguntam onde trabalhar.
 
 **Vault sem kit.** Os arquivos continuam legíveis — são markdown. O que se perde são os comandos e
 as skills. O `STATUS.md` de cada projeto segue sendo o ponto de entrada, só que lido a mao.
@@ -120,7 +120,7 @@ desabilite o hook no `settings.json` do projeto até estar — não contorne arq
 ## Atualizando
 
 ```
-/plugin update bks-sdd-kit@bks-sdd-kit
+/plugin update bkhar@bks-harness
 ```
 
 O vault não e afetado: o kit não escreve nele fora do que os comandos gravam a seu pedido.

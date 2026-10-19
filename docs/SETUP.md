@@ -57,12 +57,11 @@ git push -u origin main
 ## 2 · Instalar o kit
 
 O vault não tem comando nenhum. Skills, comandos, agentes e guardas vêm do plugin
-[`bks-sdd-kit`](https://github.com/fabiobackside-code/bks-sdd-kit), instalado uma vez por maquina:
+[`bkhar`](https://github.com/fabiobackside-code/Bks-Harness), do repositório `Bks-Harness`, instalado uma vez por maquina:
 
 ```bash
-git clone https://github.com/fabiobackside-code/bks-sdd-kit ~/bks-sdd-kit
-claude plugin marketplace add ~/bks-sdd-kit
-claude plugin install bks@bks-sdd-kit
+claude plugin marketplace add fabiobackside-code/Bks-Harness
+claude plugin install bkhar@bks-harness
 ```
 
 Conferir:
@@ -71,11 +70,11 @@ Conferir:
 claude plugin list
 ```
 
-O plugin `bks` deve aparecer com escopo `user` — global, vale em qualquer pasta. O nome do plugin
-é `bks`, o do repositório e do marketplace é `bks-sdd-kit`; é de `bks` que sai o prefixo dos
-comandos.
+O plugin `bkhar` deve aparecer com escopo `user` — global, vale em qualquer pasta. O nome do plugin
+é `bkhar`, o do repositório é `Bks-Harness` e o do marketplace é `bks-harness`; é de `bkhar` que
+sai o prefixo dos comandos.
 
-Confira também que os comandos respondem: abra uma sessão e digite `/bks:` — a lista deve mostrar
+Confira também que os comandos respondem: abra uma sessão e digite `/bkhar:` — a lista deve mostrar
 `brain`, `save`, `canonize` e os demais. Se o plugin aparece em `plugin list` mas os comandos não
 surgem, reinicie a sessão: o `claude plugin install` avisa `Restart to apply changes`.
 
@@ -165,7 +164,7 @@ raw/_inbox/  ──/ingest──>  raw/{tipo}/  +  wiki/{area}/
 **2 · Rode o ingest**, com a sessão aberta na raiz do vault:
 
 ```
-/bks:ingest
+/bkhar:ingest
 ```
 
 Ele le o que está no inbox, classifica por tipo, move para a pasta certa em `raw/` e escreve o
@@ -223,7 +222,7 @@ A regra: **se só faz sentido dentro de um projeto, e do projeto.**
 Com a sessão aberta na raiz do vault:
 
 ```
-/bks:new-project
+/bkhar:new-project
 ```
 
 Pergunta o nome, a categoria (`backside`, `w3`, `private` — renomeie como quiser) e o **perfil**,
@@ -256,7 +255,7 @@ Daqui em diante o ciclo de trabalho está em [`COMO-USAR.md`](COMO-USAR.md).
 ```
 cd /caminho/do/meu-vault
 claude
-/bks:brain
+/bkhar:brain
 ```
 
 Deve sair o panorama — vazio, se você ainda não criou projeto. Se o comando não existir, o plugin
@@ -296,7 +295,7 @@ E o que o produto E?                             → {projeto}/brain/domain/
 E como se constrói neste projeto?                → {projeto}/brain/engineering/
 E uma decisão fechada deste projeto?             → {projeto}/decisions/
 E material bruto ainda não consolidado?          → {projeto}/docs/input/
-E ferramenta, template, skill reusável?          → bks-sdd-kit, não aqui
+E ferramenta, template, skill reusável?          → plugin bkhar, não aqui
 ```
 
 Detalhe de cada diretório em [`ESTRUTURA.md`](ESTRUTURA.md).

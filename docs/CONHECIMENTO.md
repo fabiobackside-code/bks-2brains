@@ -57,10 +57,10 @@ pode virar página curada. A segunda é pensamento em formação — fica arquiv
 ### O comando
 
 ```
-/bks:ingest raw/papers/nome.pdf        uma fonte específica
-/bks:ingest https://exemplo.com/artigo busca, salva cópia em raw/, ingere
-/bks:ingest raw/_inbox/                classifica e processa tudo que está lá
-/bks:ingest                            sem argumento: assume _inbox/
+/bkhar:ingest raw/papers/nome.pdf        uma fonte específica
+/bkhar:ingest https://exemplo.com/artigo busca, salva cópia em raw/, ingere
+/bkhar:ingest raw/_inbox/                classifica e processa tudo que está lá
+/bkhar:ingest                            sem argumento: assume _inbox/
 ```
 
 Cada tipo tem uma armadilha diferente para alucinação, e o comando trata cada um de um jeito —
@@ -89,7 +89,7 @@ sem fonte é lembrança; fonte sem afirmação é recorte.
 
 ### Estado da página
 
-O `/bks:ingest` marca a página como `draft`. Ela vira `stable` quando você a usou numa decisão
+O `/bkhar:ingest` marca a página como `draft`. Ela vira `stable` quando você a usou numa decisão
 real e ela se sustentou. Página que nunca saiu de `draft` depois de meses é candidata a sair — ou
 a conclusão não era tão útil, ou não estava madura.
 

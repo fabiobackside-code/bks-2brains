@@ -11,7 +11,7 @@ O ciclo de trabalho, do primeiro material bruto até o código entregue.
 ```
 cd /caminho/do/vault
 claude
-/bks:brain
+/bkhar:brain
 ```
 
 Sai o panorama: todos os projetos, em que fase, o que trava, quando foi tocado pela última vez.
@@ -22,15 +22,15 @@ Você escolhe.
 ```
 cd /caminho/do/vault/repos/backside/meu-projeto
 claude
-/bks:brain
+/bkhar:brain
 ```
 
 Sai o `STATUS.md`: onde parou, o que trava, próximo passo.
 
 Mesmo comando. O que muda e de onde você chama.
 
-> **Por que não se trabalha a partir da raiz.** Os comandos de projeto — `/bks:spec`, `/bks:loop`,
-> `/bks:save` — escrevem no repositório onde a sessão está aberta. Rodar da raiz gravaria no lugar
+> **Por que não se trabalha a partir da raiz.** Os comandos de projeto — `/bkhar:spec`, `/bkhar:loop`,
+> `/bkhar:save` — escrevem no repositório onde a sessão está aberta. Rodar da raiz gravaria no lugar
 > errado. A raiz serve para decidir; o trabalho acontece dentro do projeto.
 
 ---
@@ -42,7 +42,7 @@ Mesmo comando. O que muda e de onde você chama.
 ```
 cd <raiz do seu vault>
 claude
-/bks:new-project
+/bkhar:new-project
 ```
 
 Pergunta o nome, a categoria (`backside`, `w3`, `private`) e o **perfil** — o que o projeto gera.
@@ -73,7 +73,7 @@ Todos os passos abaixo rodam **com a sessão aberta na raiz do projeto**.
 **1 · Material entra**
 
 ```
-/bks:note arquitetura pretendida
+/bkhar:note arquitetura pretendida
 ```
 
 Escreve em `docs/input/notas/`. Nota viva: cresce ao longo dos dias, com seção
@@ -84,7 +84,7 @@ Material de terceiros vai a mao para `docs/input/research/`.
 **2 · Consolidar**
 
 ```
-/bks:canonize
+/bkhar:canonize
 ```
 
 Le tudo de `docs/input/` e `docs/design/` e escreve `docs/canonical/CONTEXT.md`. A partir daqui, e
@@ -96,7 +96,7 @@ formando.
 **3 · Produto**
 
 ```
-/bks:prd
+/bkhar:prd
 ```
 
 Do `CONTEXT.md` sai o PRD: o que o produto e, para quem, e o que conta como pronto.
@@ -104,7 +104,7 @@ Do `CONTEXT.md` sai o PRD: o que o produto e, para quem, e o que conta como pron
 **4 · Especificar**
 
 ```
-/bks:spec
+/bkhar:spec
 ```
 
 Entrevista por bounded context. Gera `specs/features/FEAT-*.md`. Aprovado, gera
@@ -115,7 +115,7 @@ As três aprovações importam. Spec sem teste vira código sem critério de ace
 **5 · Arquitetura**
 
 ```
-/bks:arch
+/bkhar:arch
 ```
 
 Gera `outputs/ARCH-{projeto}.md` e atualiza o `README.md`. Diagramas na notação BKS.
@@ -123,7 +123,7 @@ Gera `outputs/ARCH-{projeto}.md` e atualiza o `README.md`. Diagramas na notaçã
 **6 · Implementar**
 
 ```
-/bks:loop
+/bkhar:loop
 ```
 
 Implementa uma task sob LOOP-4: até quatro tentativas contra goals verificáveis — build limpo,
@@ -132,7 +132,7 @@ testes verdes, cenários da `TEST` cobertos.
 **7 · Revisar**
 
 ```
-/bks:review
+/bkhar:review
 ```
 
 Revisão independente, read-only, em invocação separada de quem implementou.
@@ -140,14 +140,14 @@ Revisão independente, read-only, em invocação separada de quem implementou.
 **8 · Fechar a sessão**
 
 ```
-/bks:save
+/bkhar:save
 ```
 
 Roteia o que a sessão produziu: decisões para `decisions/`, specs para `specs/`, reescreve o
 `STATUS.md`, acrescenta o marco no `JOURNAL.md`.
 
-**Sempre feche com `/bks:save`.** E ele que mantém o `STATUS.md` util — e o `STATUS.md` e o que o
-`/bks:brain` le da próxima vez.
+**Sempre feche com `/bkhar:save`.** E ele que mantém o `STATUS.md` util — e o `STATUS.md` e o que o
+`/bkhar:brain` le da próxima vez.
 
 ---
 
@@ -156,13 +156,13 @@ Roteia o que a sessão produziu: decisões para `decisions/`, specs para `specs/
 ```
 cd /caminho/do/vault
 claude
-/bks:brain
+/bkhar:brain
 ```
 
 O panorama mostra o que estava ativo e o que travou. Escolha, abra a sessão no projeto, e rode
-`/bks:brain` de novo — agora ele le o `STATUS.md` daquele projeto.
+`/bkhar:brain` de novo — agora ele le o `STATUS.md` daquele projeto.
 
-Se o `STATUS.md` estiver velho em relação ao `JOURNAL.md` ou ao git, o `/bks:brain` avisa e oferece
+Se o `STATUS.md` estiver velho em relação ao `JOURNAL.md` ou ao git, o `/bkhar:brain` avisa e oferece
 atualizar.
 
 ---
@@ -173,7 +173,7 @@ atualizar.
 `brain/engineering/`.
 
 **Transversal** — vale para mais de um projeto, ou para nenhum em particular: vai para
-`knowledge/` do vault. Material bruto entra em `knowledge/raw/_inbox/` e o `/bks:ingest` classifica.
+`knowledge/` do vault. Material bruto entra em `knowledge/raw/_inbox/` e o `/bkhar:ingest` classifica.
 
 A regra: se só faz sentido dentro de um projeto, e do projeto.
 
@@ -181,13 +181,13 @@ A regra: se só faz sentido dentro de um projeto, e do projeto.
 
 ## O que o kit traz
 
-O vault não tem comandos nem skills. Vem tudo do plugin `bks-sdd-kit`:
+O vault não tem comandos nem skills. Vem tudo do plugin `bkhar`, do repositório `Bks-Harness`:
 
 | | |
 |---|---|
 | Skills | `bks-sdd`, `bks-dotnet-solutions`, `bks-typescript-solutions`, `bks-tests`, `bks-arch`, `bks-standards`, `bks-create-plan-tasks` |
-| Comandos | `/bks:brain` `/bks:new-project` `/bks:note` `/bks:canonize` `/bks:prd` `/bks:spec` `/bks:arch` `/bks:loop` `/bks:review` `/bks:save` |
-| Agentes | `planner` `builder` `reviewer` `scribe` |
+| Comandos | `/bkhar:brain` `/bkhar:new-project` `/bkhar:note` `/bkhar:canonize` `/bkhar:prd` `/bkhar:spec` `/bkhar:arch` `/bkhar:loop` `/bkhar:review` `/bkhar:save` `/bkhar:ask` `/bkhar:panel` `/bkhar:refine` |
+| Agentes | `architect` `tester` `developer` `security` `quality` `scribe` |
 | Guardas | recusam MediatR, comentario acima de cinco linhas, e tipo público sem documentação |
 
 Detalhes em [`INTEGRACAO-KIT.md`](INTEGRACAO-KIT.md).

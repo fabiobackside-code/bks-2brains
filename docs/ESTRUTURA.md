@@ -80,7 +80,7 @@ Como usar o vault. Não e conhecimento técnico — isso e `knowledge/`.
 
 ## Projeto
 
-Todo projeto criado pelo `/bks:new-project` nasce assim:
+Todo projeto criado pelo `/bkhar:new-project` nasce assim:
 
 ```
 {{projeto}}/
@@ -116,11 +116,11 @@ Todo projeto criado pelo `/bks:new-project` nasce assim:
 
 | Arquivo | Responde | Escrito por | Reescrito? |
 |---|---|---|---|
-| `STATUS.md` | onde o projeto está **agora** | `/bks:save` | sim, por inteiro |
-| `JOURNAL.md` | como chegou até aqui | `/bks:save` | não, só acrescenta |
-| `WORKFLOW.md` | como se trabalha aqui | `/bks:new-project` | só quando o fluxo muda |
+| `STATUS.md` | onde o projeto está **agora** | `/bkhar:save` | sim, por inteiro |
+| `JOURNAL.md` | como chegou até aqui | `/bkhar:save` | não, só acrescenta |
+| `WORKFLOW.md` | como se trabalha aqui | `/bkhar:new-project` | só quando o fluxo muda |
 
-O `STATUS.md` e o ponto de entrada. O `/bks:brain` le ele.
+O `STATUS.md` e o ponto de entrada. O `/bkhar:brain` le ele.
 
 ### `brain/domain/` contra `brain/engineering/`
 
@@ -148,7 +148,7 @@ E o que o produto E?                             → {projeto}/brain/domain/
 E como se constrói neste projeto?                → {projeto}/brain/engineering/
 E uma decisão fechada deste projeto?             → {projeto}/decisions/
 E material bruto ainda não consolidado?          → {projeto}/docs/input/
-E ferramenta, template, skill reusável?          → o plugin bks, não aqui
+E ferramenta, template, skill reusável?          → o plugin bkhar, não aqui
 ```
 
 ---

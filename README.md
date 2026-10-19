@@ -5,12 +5,12 @@ o conteúdo e seu, e nasce vazio.
 
 Um vault guarda o que atravessa projetos: quem você e, o que você aprendeu, e as decisões sobre
 como você trabalha. Não guarda ferramenta — skills, comandos, agentes e templates vêm do plugin
-[`bks-sdd-kit`](https://github.com/fabiobackside-code/bks-sdd-kit), que se instala uma vez e serve
+[`bkhar`](https://github.com/fabiobackside-code/Bks-Harness), do repositório `Bks-Harness`, que se instala uma vez e serve
 qualquer maquina.
 
 ## A divisão
 
-| | `bks-2brains` | `bks-sdd-kit` |
+| | `bks-2brains` | `Bks-Harness` (plugin `bkhar`) |
 |---|---|---|
 | O que e | o vault | o motor |
 | Contem | conhecimento, perfil, projetos | skills, comandos, agentes, hooks, templates |
@@ -35,8 +35,8 @@ rm -rf .git && git init          # o seu vault e outro repositório
 Instale o kit:
 
 ```
-/plugin marketplace add fabiobackside-code/bks-sdd-kit
-/plugin install bks-sdd-kit@bks-sdd-kit
+/plugin marketplace add fabiobackside-code/Bks-Harness
+/plugin install bkhar@bks-harness
 ```
 
 Aponte o vault, em `~/.claude/settings.json`:
