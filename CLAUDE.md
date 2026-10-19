@@ -7,7 +7,7 @@ repositório de cada projeto.
 
 O vault guarda o que atravessa projetos: perfil, base de conhecimento e decisões sobre o próprio
 processo. Ferramenta não mora aqui — skills, comandos, agentes e templates vêm do plugin
-`bks` (repositório `bks-sdd-kit`).
+`bkhar` (repositório `Bks-Harness`).
 
 ```
 workbench/     perfil, decisões de processo
@@ -18,13 +18,13 @@ docs/          os guias deste vault
 
 ## O que fazer numa sessão aberta aqui
 
-Rode `/bks:brain`. Ele monta o panorama de todos os projetos a partir dos `STATUS.md` e diz qual tem
+Rode `/bkhar:brain`. Ele monta o panorama de todos os projetos a partir dos `STATUS.md` e diz qual tem
 trabalho pronto para seguir.
 
 Para trabalhar num projeto, abra uma sessão nova na pasta dele. Os comandos de projeto escrevem no
 repositório onde a sessão está aberta — rodar daqui gravaria no lugar errado.
 
-`/bks:new-project` é a exceção: roda aqui, cria em `repos/{categoria}/{nome}/`.
+`/bkhar:new-project` é a exceção: roda aqui, cria em `repos/{categoria}/{nome}/`.
 
 ## Antes de responder qualquer coisa
 
@@ -43,7 +43,7 @@ partir de `workbench/profile.example.md`.
 | O que um produto é | `repos/.../brain/domain/` |
 | Como se constrói num projeto | `repos/.../brain/engineering/` |
 | Decisão fechada de um projeto | `repos/.../decisions/` |
-| Ferramenta, template, skill reusável | o plugin `bks`, não aqui |
+| Ferramenta, template, skill reusável | o plugin `bkhar`, não aqui |
 
 Detalhes em `docs/ESTRUTURA.md`.
 

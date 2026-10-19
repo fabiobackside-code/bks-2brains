@@ -51,7 +51,7 @@ Ative em **Settings → Community plugins → Browse**. Comece com poucos; adici
 | **Dataview** | Monta tabelas/painéis vivos a partir do frontmatter (dashboard de specs, ADRs, projetos) | Alta |
 | **Templater** | Cria nota nova já preenchida a partir dos seus templates | Alta |
 | **Obsidian Git** | Faz commit/backup automático do vault (versiona seu conhecimento) | Média |
-| **Mermaid** (core, já embutido) | Renderiza os diagramas C4 que o `/bks:arch` gera | Já tem |
+| **Mermaid** (core, já embutido) | Renderiza os diagramas C4 que o `/bkhar:arch` gera | Já tem |
 | **Kanban** | Board visual de tarefas do projeto, se você gosta de quadro | Baixa |
 | **Home tab / Dashboard++** | Uma home page do vault | Baixa |
 
@@ -98,7 +98,7 @@ Com isso, o Dataview monta sozinho a tabela de todas as features do projeto e se
 - **Dia 5–6:** instalar Dataview + Templater; colar um dashboard do Apêndice A numa nota `HOME.md`.
   > *O que você deve ver ao final:* abrir `HOME.md` em modo leitura e enxergar uma tabela viva com as features do bks-marine (não um bloco de código cru) — sinal de que o Dataview está processando a query.
 - **Semana 2:** rodar um projeto de verdade (o bks-marine) e usar o Obsidian só para **ler** o que o Claude Code escreve — specs, ADRs, o ARCH com diagrama. A fluência vem do uso real, não de estudar o app.
-  > *Exemplo:* depois de um `/bks:spec` no terminal, abra `specs/features/FEAT-autenticacao.md` no Obsidian — não no editor de texto — e confirme que os `[[ ]]` que o Claude escreveu já aparecem clicáveis e o Mermaid do `/bks:arch` renderiza como diagrama, não como texto bruto.
+  > *Exemplo:* depois de um `/bkhar:spec` no terminal, abra `specs/features/FEAT-autenticacao.md` no Obsidian — não no editor de texto — e confirme que os `[[ ]]` que o Claude escreveu já aparecem clicáveis e o Mermaid do `/bkhar:arch` renderiza como diagrama, não como texto bruto.
 
 ---
 
